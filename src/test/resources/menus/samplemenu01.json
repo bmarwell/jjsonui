@@ -1,0 +1,33 @@
+[
+    { 
+        "displayString": "Menü 1: NOOP",
+        "ActionNoop": { }
+    },
+    {
+         "displayString": "Menü 2: ls -l -F",
+         "ActionSystem": {
+            "command": "ls",
+            "parameters": [ "-l", "-F" ]
+        }
+    },
+    {
+        "displayString": "Weitere Befehle",
+        "children": [
+            {
+                "displayString": "Untermenü 3.1",
+                "actionNoop": { }
+            },
+            {
+                "displayString": "Untermenü 3.2",
+                "ActionEcho": {
+                    "command": "echo",
+                    "parameters": [
+                        "-e",
+                        "-n",
+                        "\"Echoing text\""
+                        ]
+                }
+            }
+        ]
+    }
+]
